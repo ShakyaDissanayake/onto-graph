@@ -1,0 +1,7 @@
+rdflib
+langchain
+python-dotenv
+langchain-community
+langchain-groq
+langgraph
+streamlit
