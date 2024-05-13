@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://www.example.org/DrugInteraction.owl#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:comment>
+      Ontology capturing Drug Interactions, Alternatives, Conflicts, and Similarities.
+    </rdfs:comment>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Object Properties -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#hasAlternative -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#hasAlternative">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:range rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>hasAlternative</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#hasConflict -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#hasConflict">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:range rdf:resource="http://www.example.org/DrugInteraction.owl#Consumable"/>
+	<rdfs:label>hasConflict</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#hasInteraction -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#hasInteraction">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:range rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>hasInteraction</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#hasSimilarity -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#hasSimilarity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:range rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>hasSimilarity</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Classes -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#AlternativeDrug -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#AlternativeDrug">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>AlternativeDrug</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Conflict -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Conflict">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Conflict</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Consumable -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Consumable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment>consumables</rdfs:comment>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Drug -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Drug">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Drug</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#DrugInteraction -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#DrugInteraction">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>DrugInteraction</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Similarity -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Similarity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Similarity</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Individuals -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Alcohol -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Alcohol">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Consumable"/>
+	<rdfs:label>Alcohol</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Amlodipine -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Amlodipine">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<hasSimilarity rdf:resource="http://www.example.org/DrugInteraction.owl#Nifedipine"/>
+	<rdfs:label>Amlodipine</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Apixaban -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Apixaban">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>Apixaban</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Aspirin -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Aspirin">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>Aspirin</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Atorvastatin -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Atorvastatin">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<hasConflict rdf:resource="http://www.example.org/DrugInteraction.owl#grapefruitJuice"/>
+	<rdfs:label>Atorvastatin</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Caffeine -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Caffeine">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Consumable"/>
+	<rdfs:label>Caffeine</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Ciprofloxacin -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Ciprofloxacin">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>Ciprofloxacin</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Clopidogrel -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Clopidogrel">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<hasInteraction rdf:resource="http://www.example.org/DrugInteraction.owl#Omeprazole"/>
+	<rdfs:label>Clopidogrel</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Empagliflozin -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Empagliflozin">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>Empagliflozin</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Erythromycin -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Erythromycin">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>Erythromycin</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Esomeprazole -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Esomeprazole">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>Esomeprazole</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Fluoxetine -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Fluoxetine">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>Fluoxetine</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Glucophage -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Glucophage">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>Glucophage</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Ibuprofen -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Ibuprofen">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<hasSimilarity rdf:resource="http://www.example.org/DrugInteraction.owl#Naproxen"/>
+	<rdfs:label>Ibuprofen</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Lisinopril -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Lisinopril">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<hasAlternative rdf:resource="http://www.example.org/DrugInteraction.owl#Losartan"/>
+	<hasInteraction rdf:resource="http://www.example.org/DrugInteraction.owl#Spironolactone"/>
+	<rdfs:label>Lisinopril</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Losartan -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Losartan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>Losartan</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Metformin -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Metformin">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<hasAlternative rdf:resource="http://www.example.org/DrugInteraction.owl#Empagliflozin"/>
+	<hasInteraction rdf:resource="http://www.example.org/DrugInteraction.owl#Ciprofloxacin"/>
+	<hasSimilarity rdf:resource="http://www.example.org/DrugInteraction.owl#Glucophage"/>
+	<rdfs:label>Metformin</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Metronidazole -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Metronidazole">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<hasConflict rdf:resource="http://www.example.org/DrugInteraction.owl#Alcohol"/>
+	<rdfs:label>Metronidazole</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Naproxen -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Naproxen">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>Naproxen</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Nifedipine -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Nifedipine">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>Nifedipine</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Omeprazole -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Omeprazole">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<hasAlternative rdf:resource="http://www.example.org/DrugInteraction.owl#Pantoprazole"/>
+	<hasSimilarity rdf:resource="http://www.example.org/DrugInteraction.owl#Esomeprazole"/>
+	<rdfs:label>Omeprazole</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Pantoprazole -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Pantoprazole">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>Pantoprazole</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Phenelzine -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Phenelzine">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<hasConflict rdf:resource="http://www.example.org/DrugInteraction.owl#tyramineFoods"/>
+	<rdfs:label>Phenelzine</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Rosuvastatin -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Rosuvastatin">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>Rosuvastatin</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Sertraline -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Sertraline">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<hasSimilarity rdf:resource="http://www.example.org/DrugInteraction.owl#Fluoxetine"/>
+	<rdfs:label>Sertraline</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Simvastatin -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Simvastatin">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<hasAlternative rdf:resource="http://www.example.org/DrugInteraction.owl#Rosuvastatin"/>
+	<hasInteraction rdf:resource="http://www.example.org/DrugInteraction.owl#Erythromycin"/>
+	<rdfs:label>Simvastatin</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Spironolactone -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Spironolactone">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<rdfs:label>Spironolactone</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Theophylline -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Theophylline">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<hasConflict rdf:resource="http://www.example.org/DrugInteraction.owl#Caffeine"/>
+	<rdfs:label>Theophylline</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#Warfarin -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#Warfarin">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Drug"/>
+	<hasAlternative rdf:resource="http://www.example.org/DrugInteraction.owl#Apixaban"/>
+	<hasConflict rdf:resource="http://www.example.org/DrugInteraction.owl#greenLeafyVegetables"/>
+	<hasInteraction rdf:resource="http://www.example.org/DrugInteraction.owl#Aspirin"/>
+	<rdfs:label>Warfarin</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#grapefruitJuice -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#grapefruitJuice">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Consumable"/>
+	<rdfs:label>GrapefruitJuice</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#greenLeafyVegetables -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#greenLeafyVegetables">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Consumable"/>
+	<rdfs:label>GreenLeafyVegetables</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://www.example.org/DrugInteraction.owl#tyramineFoods -->
+
+<rdf:Description rdf:about="http://www.example.org/DrugInteraction.owl#tyramineFoods">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.example.org/DrugInteraction.owl#Consumable"/>
+	<rdfs:label>TyramineFoods</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
+</rdf:RDF>
