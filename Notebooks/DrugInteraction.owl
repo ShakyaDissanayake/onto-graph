@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/DrugInteraction.owl#"
+     xml:base="http://www.example.org/DrugInteraction.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <!-- Ontology Header -->
+    <owl:Ontology rdf:about="http://www.example.org/DrugInteraction.owl"/>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="#TestProgram"/>
+    <owl:Class rdf:about="#Drug"/>
+    <owl:Class rdf:about="#Interaction"/>
+    <owl:Class rdf:about="#Conflict"/>
+    <owl:Class rdf:about="#Similarity"/>
+
+    <!-- Object Properties -->
+    <owl:ObjectProperty rdf:about="#causedBy">
+        <rdfs:domain rdf:resource="#Interaction"/>
+        <rdfs:range rdf:resource="#Drug"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#between">
+        <rdfs:domain rdf:resource="#Conflict"/>
+        <rdfs:range rdf:resource="#Drug"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#relatedTo">
+        <rdfs:domain rdf:resource="#Similarity"/>
+        <rdfs:range rdf:resource="#Drug"/>
+    </owl:ObjectProperty>
+
+    <!-- Individuals: Drugs -->
+    <owl:NamedIndividual rdf:about="#Warfarin">
+        <rdf:type rdf:resource="#Drug"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#Aspirin">
+        <rdf:type rdf:resource="#Drug"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#Nitroglycerin">
+        <rdf:type rdf:resource="#Drug"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#Sildenafil">
+        <rdf:type rdf:resource="#Drug"/>
+    </owl:NamedIndividual>
+
+    <!-- Instances: Interactions -->
+    <owl:NamedIndividual rdf:about="#Interaction1">
+        <rdf:type rdf:resource="#Interaction"/>
+        <causedBy rdf:resource="#Warfarin"/>
+        <causedBy rdf:resource="#Aspirin"/>
+        <rdfs:label>Warfarin and Aspirin Interaction</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- Instances: Conflicts -->
+    <owl:NamedIndividual rdf:about="#Conflict1">
+        <rdf:type rdf:resource="#Conflict"/>
+        <between rdf:resource="#Sildenafil"/>
+        <between rdf:resource="#Nitroglycerin"/>
+        <rdfs:label>Sildenafil and Nitroglycerin Conflict</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- Instances: Similarities -->
+    <owl:NamedIndividual rdf:about="#Similarity1">
+        <rdf:type rdf:resource="#Similarity"/>
+        <relatedTo rdf:resource="#Warfarin"/>
+        <relatedTo rdf:resource="#Aspirin"/>
+        <rdfs:label>Similarity Between Warfarin and Aspirin</rdfs:label>
+    </owl:NamedIndividual>
+
+</rdf:RDF>
